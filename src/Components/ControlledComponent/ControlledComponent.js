@@ -4,37 +4,47 @@ import React from "react";
 class ControlledComponent extends React.Component {
 
     state = {
-        value: '',
-        textArea: ''
+        input: '',
+        textArea: '',
+        select: 'opt2'
     }
 
     constructor(props) {
         super(props);
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
-        this.handleChangeTA = this.handleChangeTA.bind(this);
+        // this.handleChangeTA = this.handleChangeTA.bind(this);
+        // this.handleChangeSelect = this.handleChangeSelect.bind(this);
     }
 
     handleChange(e) {
-        const value = e.target.value;
+        const { name, value } = e.target;
 
         this.setState({
-            value
+            [name]: value
         })
     }
 
     handleSubmit(e) {
         e.preventDefault();
-        console.log(this.state.value);
+        console.log(this.state);
     }
 
-    handleChangeTA(e) {
-        const textArea = e.target.value;
+    // handleChangeTA(e) {
+    //     const textArea = e.target.value;
 
-        this.setState({
-            textArea
-        })
-    }
+    //     this.setState({
+    //         textArea
+    //     })
+    // }
+
+    // handleChangeSelect(e) {
+    //     const select = e.target.value;
+
+    //     this.setState({
+    //         select
+    //     })
+    // }
 
     render() {
 
@@ -43,9 +53,16 @@ class ControlledComponent extends React.Component {
                 <h3>Controlled Component</h3>
 
                 <form onSubmit={this.handleSubmit}>
-                    <input type='text' value={this.state.value} onChange={this.handleChange} />
+                    <input type='text' name='input' value={this.state.input} onChange={this.handleChange} />
 
-                    <textarea value={this.state.textArea} onChange={this.handleChangeTA} />
+                    <textarea value={this.state.textArea} name='textArea' onChange={this.handleChange} />
+
+                    <select value={this.state.select} name='select' onChange={this.handleChange}>
+                        <option value='opt1'>Option 1</option>
+                        <option value='opt2'>Option 2</option>
+                        <option value='opt3'>Option 3</option>
+                        <option value='opt4'>Option 4</option>
+                    </select>
 
                     <button>
                         Click me!
