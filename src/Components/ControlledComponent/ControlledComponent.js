@@ -4,13 +4,15 @@ import React from "react";
 class ControlledComponent extends React.Component {
 
     state = {
-        value: ''
+        value: '',
+        textArea: ''
     }
 
     constructor(props) {
         super(props);
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.handleChangeTA = this.handleChangeTA.bind(this);
     }
 
     handleChange(e) {
@@ -21,8 +23,17 @@ class ControlledComponent extends React.Component {
         })
     }
 
-    handleSubmit() {
+    handleSubmit(e) {
+        e.preventDefault();
         console.log(this.state.value);
+    }
+
+    handleChangeTA(e) {
+        const textArea = e.target.value;
+
+        this.setState({
+            textArea
+        })
     }
 
     render() {
@@ -33,6 +44,8 @@ class ControlledComponent extends React.Component {
 
                 <form onSubmit={this.handleSubmit}>
                     <input type='text' value={this.state.value} onChange={this.handleChange} />
+
+                    <textarea value={this.state.textArea} onChange={this.handleChangeTA} />
 
                     <button>
                         Click me!
