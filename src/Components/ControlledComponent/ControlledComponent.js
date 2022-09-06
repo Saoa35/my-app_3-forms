@@ -19,7 +19,11 @@ class ControlledComponent extends React.Component {
     }
 
     handleChange(e) {
-        const { name, value } = e.target;
+        // const { name, value, checked } = e.target;
+
+        const target = e.target;
+        const value = target.type === 'checkbox' ? target.checked : target.value;
+        const name = target.name;
 
         this.setState({
             [name]: value
