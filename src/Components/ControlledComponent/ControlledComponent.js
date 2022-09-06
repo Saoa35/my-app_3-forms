@@ -6,7 +6,8 @@ class ControlledComponent extends React.Component {
     state = {
         input: '',
         textArea: '',
-        select: 'opt2'
+        select: 'opt2',
+        checkbox: false
     }
 
     constructor(props) {
@@ -53,9 +54,12 @@ class ControlledComponent extends React.Component {
                 <h3>Controlled Component</h3>
 
                 <form onSubmit={this.handleSubmit}>
+
                     <input type='text' name='input' value={this.state.input} onChange={this.handleChange} />
 
                     <textarea value={this.state.textArea} name='textArea' onChange={this.handleChange} />
+
+                    <input type='checkbox' name='checkbox' value={this.state.checkbox} onChange={this.handleChange} />
 
                     <select value={this.state.select} name='select' onChange={this.handleChange}>
                         <option value='opt1'>Option 1</option>
