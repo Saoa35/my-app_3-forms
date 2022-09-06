@@ -19,7 +19,7 @@ class PropTypesEx extends React.Component {
 
 PropTypesEx.propTypes = {
     name: PropTypes.string,
-    // age: PropTypes.number
+    age: PropTypes.number
 }
 
 export default PropTypesEx;

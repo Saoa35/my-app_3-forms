@@ -6,7 +6,7 @@ function App() {
   return (
     <div className="App">
       {/* <ControlledComponent /> */}
-      <PropTypesEx name='Oleksandr' age='37' />
+      <PropTypesEx name='Oleksandr' age={37} />
     </div>
   );
 }
