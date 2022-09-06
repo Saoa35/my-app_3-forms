@@ -8,7 +8,7 @@ class PropTypes extends React.Component {
             <div>
                 <h3>PropTypes</h3>
                 <p>
-                    {this.props.name} - {this.props.age}
+                   <b>{this.props.name} - {this.props.age}</b> 
                 </p>
             </div>
         )
