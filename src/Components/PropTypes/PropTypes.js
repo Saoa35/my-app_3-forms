@@ -7,6 +7,9 @@ class PropTypes extends React.Component {
         return(
             <div>
                 <h3>PropTypes</h3>
+                <p>
+                    {this.props.name} - {this.props.age}
+                </p>
             </div>
         )
     }

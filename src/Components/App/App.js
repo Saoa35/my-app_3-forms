@@ -6,7 +6,7 @@ function App() {
   return (
     <div className="App">
       {/* <ControlledComponent /> */}
-      <PropTypes />
+      <PropTypes name='Oleksandr' age='37' />
     </div>
   );
 }
