@@ -1,6 +1,8 @@
 import React from 'react';
+// import { ReactPropTypes } from 'react';
+import PropTypes from 'prop-types';
 
-class PropTypes extends React.Component {
+class PropTypesEx extends React.Component {
 
     render() {
 
@@ -15,4 +17,9 @@ class PropTypes extends React.Component {
     }
 }
 
-export default PropTypes;
+PropTypesEx.propTypes = {
+    name: PropTypes.string,
+    // age: PropTypes.number
+}
+
+export default PropTypesEx;

@@ -1,12 +1,12 @@
 // import ControlledComponent from '../ControlledComponent/ControlledComponent';
-import PropTypes from '../PropTypes/PropTypes';
+import PropTypesEx from '../PropTypesEx/PropTypesEx';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
       {/* <ControlledComponent /> */}
-      <PropTypes name='Oleksandr' age='37' />
+      <PropTypesEx name='Oleksandr' age='37' />
     </div>
   );
 }
