@@ -1,4 +1,5 @@
 import React from 'react';
+import TestCSS from '../TestCSS/TestCSS';
 import './App.css';
 // import ControlledComponent from '../ControlledComponent/ControlledComponent';
 // import PropTypesEx from '../PropTypesEx/PropTypesEx';
@@ -25,8 +26,9 @@ class App extends React.Component {
         </h2>
 
         <h3 className='h3-test'>Test text 1</h3>
-        <h3 className='h3-test'>Test text 2</h3>
-        <h3 className='h3-test'>Test text 3</h3>
+
+        <TestCSS />
+        
       </div>
     );
   }
