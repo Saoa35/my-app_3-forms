@@ -1,38 +1,24 @@
 import React from "react";
-import styled from "styled-components";
-
-
-const Section = styled.section`
-        border: 1px solid black;
-        padding: 15px;
-        margin: 15px;
-        color: blue;
-        font-size: 110%;
-    `;
-
-    const Button = styled.button`
-        display: inline-block;
-        border-radius: 3px;
-        padding: 0.5rem 0;
-        margin: 0.5rem 1rem;
-        width: 11rem;
-        background: transparent;
-        color: white;
-        border: 2px solid white;
-        cursor: pointer;
-    `;
-
+import { Button, Section } from "../ControlledComponent/styles";
 
 export default class StyledComponents extends React.Component {
+
+    state = {
+        clicked: false
+    }
 
     render() {
 
         return(
             <div>
-                <Section>
+                <Section >
                     Tips:event.preventDefault() and event.stopPropagation and event.stopImmediatePropagation
 
-                    <Button>
+                    <Button 
+                        onClick={() => this.setState({clicked: !this.state.clicked})}
+                        primary={this.state.clicked}
+                        >
+                        
                         Click me!
                     </Button>
                 </Section>
