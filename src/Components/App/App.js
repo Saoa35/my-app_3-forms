@@ -1,4 +1,5 @@
 import React from 'react';
+import StyledComponents from '../StyledComponents/StyledComponents';
 import TestCSS from '../TestCSS/TestCSS';
 import './App.css';
 // import ControlledComponent from '../ControlledComponent/ControlledComponent';
@@ -28,6 +29,8 @@ class App extends React.Component {
         <h3 className='h3-test'>Test text 1</h3>
 
         <TestCSS />
+
+        <StyledComponents />
         
       </div>
     );
