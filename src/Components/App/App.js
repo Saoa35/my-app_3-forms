@@ -1,4 +1,5 @@
 import React from 'react';
+import ToDoList from '../ToDoList/ToDoList';
 import './App.css';
 // import StyledComponents from '../StyledComponents/StyledComponents';
 // import TestCSS from '../TestCSS/TestCSS';
@@ -32,7 +33,7 @@ class App extends React.Component {
 
         <StyledComponents /> */}
 
-        <
+        <ToDoList />
         
       </div>
     );
