@@ -15,7 +15,6 @@ export default class ToDoList extends Component {
     }
 
     handleAddTodo(value) {
-        // console.log(value);
         this.setState({
             // tasks: [...this.state.tasks, value]
             tasks: this.state.tasks.concat(value)
@@ -23,7 +22,6 @@ export default class ToDoList extends Component {
     }
 
     handleDeleteTodo(id) {
-        console.log(id);
         this.setState({
             tasks: this.state.tasks.filter(item => item.id !== id)
         })

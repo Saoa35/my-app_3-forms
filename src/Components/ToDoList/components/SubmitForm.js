@@ -21,10 +21,14 @@ export default class SubmitForm extends Component {
     handleAddTodo(e) {
         e.preventDefault();
 
+       if(this.state.value) {
         this.props.onAddTodo({
             id: v4(),
             value: this.state.value
         });
+       }
+
+        this.setState({ value: '' });
     }
 
     render() {
