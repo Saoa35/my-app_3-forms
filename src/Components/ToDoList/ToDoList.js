@@ -4,8 +4,19 @@ import SubmitForm from './components/SubmitForm'
 
 export default class ToDoList extends Component {
 
-    state = {
-        tasks: [],
+    constructor(props) {
+        super(props);
+        this.state = {
+            tasks: [],
+        }
+        this.handleAddTodo = this.handleAddTodo.bind(this);
+    }
+
+    handleAddTodo(value) {
+        console.log(value);
+        // this.setState({
+
+        // })
     }
 
     render() {
@@ -16,7 +27,7 @@ export default class ToDoList extends Component {
                     <Header tasksCount={this.state.tasks.length}/>
                 </h3>
                 <div>
-                    <SubmitForm />
+                    <SubmitForm onAddTodo={this.handleAddTodo}/>
                 </div>
             </div>
         )
