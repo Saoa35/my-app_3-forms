@@ -6,7 +6,10 @@ export default class SubmitForm extends Component {
 
         return(
             <form>
-                SubmitForm
+                <input type='text'></input>
+                <button>
+                    Submit
+                </button>
             </form>
         )
     }
