@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import Header from './components/Header'
+import SubmitForm from './components/SubmitForm'
 
 export default class ToDoList extends Component {
 
@@ -7,9 +8,12 @@ export default class ToDoList extends Component {
 
         return(
             <div>
-                <h2>
+                <h3>
                     <Header />
-                </h2>
+                </h3>
+                <div>
+                    <SubmitForm />
+                </div>
             </div>
         )
     }
