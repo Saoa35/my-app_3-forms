@@ -12,12 +12,16 @@ export default class SubmitForm extends Component {
     }
 
     handleChange(e) {
-        
+        this.setState({
+            value: e.target.value
+        })
     }
 
     handleAddTodo(e) {
         e.preventDefault();
-        this.props.onAddTodo();
+        this.props.onAddTodo({
+            value: this.state.value
+        });
     }
 
     render() {

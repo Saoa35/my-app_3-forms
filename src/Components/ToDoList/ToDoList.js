@@ -13,13 +13,16 @@ export default class ToDoList extends Component {
     }
 
     handleAddTodo(value) {
-        console.log(value);
-        // this.setState({
-
-        // })
+        // console.log(value);
+        this.setState({
+            // tasks: [...this.state.tasks, value]
+            tasks: this.state.tasks.concat(value)
+        })
     }
 
     render() {
+
+        console.log(this.state.tasks);
 
         return(
             <div>
