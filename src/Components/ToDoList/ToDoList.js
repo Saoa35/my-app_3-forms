@@ -11,6 +11,7 @@ export default class ToDoList extends Component {
             tasks: [],
         }
         this.handleAddTodo = this.handleAddTodo.bind(this);
+        this.handleDeleteTodo = this.handleDeleteTodo.bind(this);
     }
 
     handleAddTodo(value) {
@@ -19,6 +20,13 @@ export default class ToDoList extends Component {
             // tasks: [...this.state.tasks, value]
             tasks: this.state.tasks.concat(value)
         })
+    }
+
+    handleDeleteTodo(id) {
+        console.log(id);
+        // this.setState({
+        //     tasks: this.state.tasks.concat(value)
+        // })
     }
 
     render() {
@@ -32,7 +40,7 @@ export default class ToDoList extends Component {
                 </h3>
                 <div>
                     <SubmitForm onAddTodo={this.handleAddTodo}/>
-                    <List list={this.state.tasks}/>
+                    <List list={this.state.tasks} onDelete={this.handleDeleteTodo}/>
                 </div>
             </div>
         )
