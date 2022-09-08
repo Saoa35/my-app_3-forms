@@ -1,6 +1,7 @@
-import React, { Component } from 'react'
-import Header from './components/Header'
-import SubmitForm from './components/SubmitForm'
+import React, { Component } from 'react';
+import Header from './components/Header';
+import List from './components/List';
+import SubmitForm from './components/SubmitForm';
 
 export default class ToDoList extends Component {
 
@@ -31,6 +32,7 @@ export default class ToDoList extends Component {
                 </h3>
                 <div>
                     <SubmitForm onAddTodo={this.handleAddTodo}/>
+                    <List list={this.state.tasks}/>
                 </div>
             </div>
         )

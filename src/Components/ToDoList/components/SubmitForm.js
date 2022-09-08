@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { v4 } from 'uuid';
 
 export default class SubmitForm extends Component {
 
@@ -19,7 +20,9 @@ export default class SubmitForm extends Component {
 
     handleAddTodo(e) {
         e.preventDefault();
+
         this.props.onAddTodo({
+            id: v4(),
             value: this.state.value
         });
     }
