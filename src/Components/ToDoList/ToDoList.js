@@ -4,12 +4,16 @@ import SubmitForm from './components/SubmitForm'
 
 export default class ToDoList extends Component {
 
+    state = {
+        tasks: [],
+    }
+
     render() {
 
         return(
             <div>
                 <h3>
-                    <Header />
+                    <Header tasksCount={this.state.tasks.length}/>
                 </h3>
                 <div>
                     <SubmitForm />
