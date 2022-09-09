@@ -33,13 +33,9 @@ export default class ToDoList extends Component {
 
         return(
             <div>
-                <h3>
-                    <Header tasksCount={this.state.tasks.length}/>
-                </h3>
-                <div>
-                    <SubmitForm onAddTodo={this.handleAddTodo}/>
-                    <List list={this.state.tasks} onDelete={this.handleDeleteTodo}/>
-                </div>
+                <Header tasksCount={this.state.tasks.length}/>          
+                <SubmitForm onAddTodo={this.handleAddTodo}/>
+                <List list={this.state.tasks} onDelete={this.handleDeleteTodo}/>
             </div>
         )
     }

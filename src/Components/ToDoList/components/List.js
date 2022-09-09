@@ -13,7 +13,8 @@ export default class List extends Component {
                         <li key={id}>
                             {value}
 
-                            <button style={{ cursor: 'pointer', marginLeft: '10px' }} onClick={() => this.props.onDelete(id)}>
+                            <button style={{ cursor: 'pointer', marginLeft: '10px' }} 
+                                    onClick={() => this.props.onDelete(id)}>
                             <FontAwesomeIcon icon={faTrash} />
                             </button>
                         </li>

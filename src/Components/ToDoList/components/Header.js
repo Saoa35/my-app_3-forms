@@ -6,7 +6,7 @@ export default class Header extends Component {
 
         return(
             <header>
-                You have {this.props.tasksCount} todos!
+                <h3>You have {this.props.tasksCount} todos!</h3>
             </header>
         )
     }
